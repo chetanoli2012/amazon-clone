@@ -3,7 +3,13 @@ import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
 
-function CheckoutProduct({ id, image, title, price, rating }) {
+/**
+ * ref is needed for react-flip-move to work. Becase of this we have created
+ * this functional component in React.forwardRef since fucttional components dont
+ * have acces to ref
+ */
+
+const CheckoutProduct = React.forwardRef(({ id, image, title, price, rating }, ref) => {
 
     const [{ basket }, dispatch] = useStateValue();
 
@@ -17,7 +23,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
 
     }
     return (
-        <div className='checkoutProduct'>
+        <div ref = {ref} key = {id} className='checkoutProduct'>
             <img className='checkoutProduct__image' src={image} alt="Checkout Product" />
             <div className="checkoutProduct__info">
                 <p className="checkoutProduct__title">{title}</p>
@@ -28,7 +34,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                 <div className="checkoutProduct__rating">
                     {
                         Array(rating).fill().map((_, i) => (
-                            <p>⭐</p>
+                            <p key = {i}>⭐</p>
                         ))
                     }
                 </div>
@@ -37,6 +43,6 @@ function CheckoutProduct({ id, image, title, price, rating }) {
             </div>
         </div>
     )
-}
+})
 
 export default CheckoutProduct

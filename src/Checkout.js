@@ -10,7 +10,7 @@ function Checkout() {
     const ticketNotVisibleState = {
         transform: "translateX(-100%)",
         opacity: 0.1
-      };
+    };
     return (
         <div className="checkout">
             <div className="checkout__left">
@@ -22,14 +22,15 @@ function Checkout() {
                 <div>
                     {user && <h3>{`Hello, ` + user.email}</h3>}
                     <h2 className="checkout__title">Your Shopping basket</h2>
-                    {/* <FlipMove enterAnimation={{
+                    <FlipMove enterAnimation={{
                         from: ticketNotVisibleState,
                         to: {}
                     }}
                         leaveAnimation={{
                             from: {},
                             to: ticketNotVisibleState
-                        }}> */}
+                        }}
+                    >
                         {basket.map(item => (
                             <CheckoutProduct
                                 key={item.id}
@@ -40,7 +41,7 @@ function Checkout() {
                                 rating={item.rating}
                             />
                         ))}
-                    {/* </FlipMove> */}
+                    </FlipMove>
 
                 </div>
             </div>
