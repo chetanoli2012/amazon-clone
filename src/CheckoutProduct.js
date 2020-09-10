@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
@@ -9,7 +9,7 @@ import { actionTypes } from './reducer';
  * have acces to ref
  */
 
-const CheckoutProduct = React.forwardRef(({ id, image, title, price, rating }, ref) => {
+const CheckoutProduct = forwardRef(({ id, image, title, price, rating }, ref) => {
 
     const [{ basket }, dispatch] = useStateValue();
 
