@@ -9,7 +9,7 @@ import { actionTypes } from './reducer';
  * have acces to ref
  */
 
-const CheckoutProduct = forwardRef(({ id, image, title, price, rating }, ref) => {
+const CheckoutProduct = forwardRef(({ id, image, title, price, rating, hideButton }, ref) => {
 
     const [{ basket }, dispatch] = useStateValue();
 
@@ -23,7 +23,7 @@ const CheckoutProduct = forwardRef(({ id, image, title, price, rating }, ref) =>
 
     }
     return (
-        <div ref = {ref} key = {id} className='checkoutProduct'>
+        <div ref={ref} key={id} className='checkoutProduct'>
             <img className='checkoutProduct__image' src={image} alt="Checkout Product" />
             <div className="checkoutProduct__info">
                 <p className="checkoutProduct__title">{title}</p>
@@ -34,11 +34,11 @@ const CheckoutProduct = forwardRef(({ id, image, title, price, rating }, ref) =>
                 <div className="checkoutProduct__rating">
                     {
                         Array(rating).fill().map((_, i) => (
-                            <p key = {i}>⭐</p>
+                            <p key={i}>⭐</p>
                         ))
                     }
                 </div>
-                <button onClick={removeFromBasket}>Remove from Basket</button>
+                {!hideButton && <button onClick={removeFromBasket}>Remove from Basket</button>}
 
             </div>
         </div>

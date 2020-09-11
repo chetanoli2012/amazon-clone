@@ -8,6 +8,12 @@ import Login from './Login';
 import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
+import Payment from './Payment';
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
+import Orders from './Orders';
+
+const promise = loadStripe('pk_test_51HPvlNF2g5S0AFrZaKq5RZDnRyUr8DH6tmf5A1maTKbpxIGy9P8f7DXDENA1wOweY88z8o2AU84Ycu0NmD0lllUg001QF2pgGo');
 
 function App() {
 
@@ -46,6 +52,11 @@ function App() {
         {/* <h1>Amazon clone</h1> */}
 
         <Switch>
+        <Route path='/orders'>
+          <Header />
+            <Orders />
+          </Route>
+
           <Route path='/login'>
             <Login />
           </Route>
@@ -53,6 +64,14 @@ function App() {
           <Route path='/checkout'>
             <Header />
             <Checkout />
+          </Route>
+
+          <Route path='/payment'>
+            <Header />
+            {/* <h1>I am the payment page!</h1> */}
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
           </Route>
 
           <Route path='/'>
