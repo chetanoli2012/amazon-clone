@@ -22,14 +22,15 @@ function Checkout() {
                 <div>
                     {user && <h3>{`Hello, ` + user.email}</h3>}
                     <h2 className="checkout__title">Your Shopping basket</h2>
-                    <FlipMove enterAnimation={{
-                        from: ticketNotVisibleState,
-                        to: {}
-                    }}
-                        leaveAnimation={{
-                            from: {},
-                            to: ticketNotVisibleState
-                        }}
+                    <FlipMove 
+                    // enterAnimation={{
+                    //     from: ticketNotVisibleState,
+                    //     to: {}
+                    // }}
+                    //     leaveAnimation={{
+                    //         from: {},
+                    //         to: ticketNotVisibleState
+                    //     }}
                     >
                         {basket.map(item => (
                             <CheckoutProduct
