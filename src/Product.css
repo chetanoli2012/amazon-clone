@@ -38,7 +38,13 @@
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
+    transition: transform 100ms ease-in;
 }
+
+.product > img:hover{
+    transform: scale(1.07);
+}
+
 
 .product > button {
     background-color: #f0c14b;
@@ -46,4 +52,9 @@
     margin-top: 10px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
+    transition: transform 100ms ease-in;
+}
+
+.product > button:hover {
+    transform: scale(1.07);
 }
