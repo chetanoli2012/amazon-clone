@@ -15,7 +15,7 @@ function Home() {
         touchTrackingEnabled: false,
         swipeDisabled: true,
         preventEventOnTouchMove: true,
-        autoPlayInterval: 1000,
+        autoPlayInterval: 2000,
         disableAutoPlayOnAction: false,
     };
     const slideImages = [
