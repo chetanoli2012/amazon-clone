@@ -16,14 +16,14 @@ function Home() {
     };
 
     const slideImages = [
-        "https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/Rajeshwari/September/GWBanners/Control/DesktopHero_1500x600._CB405007888_.jpg",
-        "https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/SamsungM/MonsterSeries/V203057508_SamsungM_M21_M31_GW_tall_hero_1500x600._CB410822764_.jpg",
-        "https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/HFC/LPG/LPG_Hero_PC_1500x600._CB407755280_.jpg",
-        "https://images-eu.ssl-images-amazon.com/images/G/31/img20/Shoes/September/SSW/GW/GW_PC_1500x600._CB404931378_.jpg",
-        "https://images-eu.ssl-images-amazon.com/images/G/31/prime/Gateway/2020/May/gaming_1500x600._CB431281464_.jpg",
-        "https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2020/img/Sports/XCM_Manual_ORIGIN_1261289_1333735_IN_in_fitness_days_event_sep_gw_in_en_3328889_1500x600_1X_en_IN._CB405086418_.jpg",
-        "https://images-eu.ssl-images-amazon.com/images/G/31/img20/PC/Accessories/GW/PC-acc_june20_DesktopHero_1500x600._CB429195970_.jpg",
-        "https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/WLA/September/Headsets/realmeBudsClassic/White/V248982080_WLA-realme_Buds_Classic_White_Mob_Hero_1242x450._CB405393760_.jpg"
+        `${process.env.PUBLIC_URL}/slide_1.jpg`,
+        `${process.env.PUBLIC_URL}/slide_2.jpg`,
+        `${process.env.PUBLIC_URL}/slide_3.jpg`,
+        `${process.env.PUBLIC_URL}/slide_4.jpg`,
+        `${process.env.PUBLIC_URL}/slide_5.jpg`,
+        `${process.env.PUBLIC_URL}/slide_6.jpg`,
+        `${process.env.PUBLIC_URL}/slide_7.jpg`,
+        `${process.env.PUBLIC_URL}/slide_8.jpg`,
     ];
 
     return (
