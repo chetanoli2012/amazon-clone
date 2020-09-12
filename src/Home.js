@@ -1,20 +1,23 @@
 import React from 'react';
 import './Home.css';
 import Product from './Product';
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
+import AliceCarousel from 'react-alice-carousel'
+import 'react-alice-carousel/lib/alice-carousel.css'
 
 function Home() {
-
     const properties = {
+        buttonsDisabled: true,
+        dotsDisabled: true,
+        autoPlay: true,
+        autoHeight: true,
         duration: 1000,
-        autoplay: true,
-        transitionDuration: 500,
-        arrows: true,
-        infinite: true,
-        // indicators: i => <div className="indicator">{i + 1}</div>
+        mouseTrackingEnabled: false,
+        touchTrackingEnabled: false,
+        swipeDisabled: true,
+        preventEventOnTouchMove: true,
+        autoPlayInterval: 1000,
+        disableAutoPlayOnAction: false,
     };
-
     const slideImages = [
         `${process.env.PUBLIC_URL}/slide_1.jpg`,
         `${process.env.PUBLIC_URL}/slide_2.jpg`,
@@ -22,36 +25,18 @@ function Home() {
         `${process.env.PUBLIC_URL}/slide_4.jpg`,
         `${process.env.PUBLIC_URL}/slide_6.jpg`,
         `${process.env.PUBLIC_URL}/slide_7.jpg`,
-        `${process.env.PUBLIC_URL}/slide_8.jpg`,
     ];
 
     return (
         <div className='home'>
-
-            {/* <p>I am the home component</p> */}
-
             <div className='home__container'>
-                <img className='home__image' src={`${process.env.PUBLIC_URL}/slide_1.jpg`} alt='Sample' />
+                {/* <img className='home__image' src={`${process.env.PUBLIC_URL}/slide_1.jpg`} alt='Sample' /> */}
 
-                {/* <Slide {...properties}>
+                <AliceCarousel {...properties}>
                     {slideImages.map((each, index) => (
-                        //   <div key={index} className="each-slide">
-                        <img key={index} className='home__image' src={each} alt="sample" />
-                        //   </div>
+                        <img className="home__image" src={each} alt="sample" />
                     ))}
-                </Slide> */}
-
-
-                {/* <div className="slide-container">
-                    <Slide duration={2000} {...properties}>
-                        {slideImages.map((each, index) => (
-                            <div key={index} className="each-slide">
-                                <img className="lazy" src={each} alt="sample" />
-                            </div>
-                        ))}
-                    </Slide>
-                </div> */}
-
+                </AliceCarousel>
 
                 <div className='home__row'>
                     <Product
