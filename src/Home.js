@@ -20,7 +20,6 @@ function Home() {
         `${process.env.PUBLIC_URL}/slide_2.jpg`,
         `${process.env.PUBLIC_URL}/slide_3.jpg`,
         `${process.env.PUBLIC_URL}/slide_4.jpg`,
-        `${process.env.PUBLIC_URL}/slide_5.jpg`,
         `${process.env.PUBLIC_URL}/slide_6.jpg`,
         `${process.env.PUBLIC_URL}/slide_7.jpg`,
         `${process.env.PUBLIC_URL}/slide_8.jpg`,
@@ -32,15 +31,15 @@ function Home() {
             {/* <p>I am the home component</p> */}
 
             <div className='home__container'>
-                {/* <img className='home__image' src='https://images-eu.ssl-images-amazon.com/images/G/31/img20/Wireless/SamsungM/M51/GWTO/PostLaunch/Uber/P38983965_IN_WLME_SamsungGalaxy_M51_New_Launchtall-hero_1500x600_1._CB405488972_.jpg' alt='Samsung Galazy M51' /> */}
+                <img className='home__image' src={`${process.env.PUBLIC_URL}/slide_1.jpg`} alt='Sample' />
 
-                <Slide {...properties}>
+                {/* <Slide {...properties}>
                     {slideImages.map((each, index) => (
                         //   <div key={index} className="each-slide">
                         <img key={index} className='home__image' src={each} alt="sample" />
                         //   </div>
                     ))}
-                </Slide>
+                </Slide> */}
 
 
                 {/* <div className="slide-container">
