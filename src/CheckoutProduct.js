@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react'
 import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
+import { store } from 'react-notifications-component';
 
 /**
  * ref is needed for react-flip-move to work. Becase of this we have created
@@ -20,6 +21,22 @@ const CheckoutProduct = forwardRef(({ id, image, title, price, rating, hideButto
             type: actionTypes.REMOVE_FROM_BASKET,
             id
         })
+
+        store.addNotification({
+            title: "Info!",
+            message: `${title} has successfully been removed from basket!`,
+            type: "default",
+            insert: "top",
+            container: "top-right",
+            animationIn: ["animated", "fadeIn"],
+            animationOut: ["animated", "fadeOut"],
+            dismiss: {
+              duration: 5000,
+              onScreen: true,
+              showIcon: true,
+              pauseOnHover: true
+            }
+          })
 
     }
     return (

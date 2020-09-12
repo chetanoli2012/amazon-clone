@@ -2,6 +2,7 @@ import React from 'react'
 import './Product.css'
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
+import { store } from 'react-notifications-component';
 
 
 function Product({ id, title, image, price, rating }) {
@@ -20,6 +21,23 @@ function Product({ id, title, image, price, rating }) {
                 rating
             }
         })
+
+        store.addNotification({
+            title: "Success!",
+            message: `${title} has successfully been added to your basket!`,
+            type: "success",
+            insert: "top",
+            container: "top-right",
+            animationIn: ["animated", "fadeIn"],
+            animationOut: ["animated", "fadeOut"],
+            dismiss: {
+              duration: 5000,
+              onScreen: true,
+              showIcon: true,
+              pauseOnHover: true
+            }
+          })
+  
     }
 
     return (
