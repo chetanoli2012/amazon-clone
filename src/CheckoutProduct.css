@@ -2,18 +2,21 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 15px;
 }
 
-/* .checkoutProduct:hover{
-    border: 1px solid gray;
-    box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
-    z-index: 500;
-    border-radius: 10px;
-} */
+.checkoutProduct:hover{
+    box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+}
 
 .checkoutProduct__info{
     padding-left: 20px;
+    transition: transform 100ms ease-in;
+}
+
+.checkoutProduct__info:hover{
+    transform: scale(1.07);
 }
 
 .checkoutProduct__info > button {
@@ -28,13 +31,13 @@
     object-fit: contain;
     width: 180px;
     height: 180px;
+    transition: transform 100ms ease-in;
+}
+.checkoutProduct__image:hover {
+    transform: scale(1.10);
 }
 
 .checkoutProduct__rating{
     display: flex;
 }
 
-.checkoutProduct__title {
-    font-size: 17px;
-    font-weight: 800;
-}
