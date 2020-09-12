@@ -57,16 +57,16 @@ function Home() {
                 <div className='home__row'>
                     <Product
                         id='214324'
-                        title={`The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses`}
-                        price={29.99}
-                        image={'https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg'}
+                        title={`Razer Blade 15 Gaming Laptop 2019: Intel Core i7-9750H 6 Core, NVIDIA GeForce RTX 2070 Max-Q, 15.6" FHD 1080p 240Hz, 16GB RAM, 512GB SSD, CNC Aluminum, Chroma RGB Lighting, Thunderbolt 3`}
+                        price={2250.24}
+                        image={'https://m.media-amazon.com/images/I/71VniIMpMkL._AC_UY218_.jpg'}
                         rating={5}
                     />
                     <Product
                         id='4326483'
-                        title={'KenWood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Doug Hook and Whisk, 5 Litre Glass Bowl'}
-                        price={239.0}
-                        image={'https://images-na.ssl-images-amazon.com/images/I/61aT8jl8THL._AC_SX679_.jpg'}
+                        title={'MSI GS75 Stealth 10SGS-271 17.3" 300Hz 3ms Ultra Thin and Light Gaming Laptop Intel Core i7-10750HK RTX 2080 Super 32GB 512GB NVMe SSD Win10PRO VR Ready'}
+                        price={2699.0}
+                        image={'https://m.media-amazon.com/images/I/710pmUkw2rL._AC_UY218_.jpg'}
                         rating={4}
                     />
                 </div>
@@ -88,9 +88,9 @@ function Home() {
                     />
                     <Product
                         id='984738'
-                        title={'Apple iPad Pro (2017) 12.9in 64GB Wi-Fi Tablet, Space Gray (Renewed)'}
-                        price={799.77}
-                        image={'https://m.media-amazon.com/images/I/61jpKblMqtL._AC_UY218_.jpg'}
+                        title={'Oculus Quest All-in-one VR Gaming Headset – 128GB'}
+                        price={765.00}
+                        image={'https://images-na.ssl-images-amazon.com/images/I/31AZvhYLyeL._AC_SY200_.jpg'}
                         rating={4}
                     />
                 </div>
